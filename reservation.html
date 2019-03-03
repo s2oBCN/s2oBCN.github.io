@@ -7,10 +7,10 @@
 </head>
 <body>
 
-<h1>Client reservation page</h1>
+<h1>Client reservation</h1>
 <article class="row">
     <section class="col-sm-6">
-        <form id="frmItem">
+        <form id="frmItem" action="reservationList.html">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">ID #</span>
                 <input type="text" id="txtID" data-id="" readonly/>
@@ -56,8 +56,9 @@
                 <label for="txtColor">Table color:</label>
                 <input type="color" id="txtColor"/>
             </div>
-            <button value="Save" id="btnSave"/>
-            Save</button>
+            <button type="submit" value="Save" id="btnSave">Save</button>
+            <button type="submit" value="Cancel" id="btnCancel" onclick="window.location='reservationDto.html';return false;">Cancel</button>
+
         </form>
     </section>
     <section class="col-sm-6">
@@ -66,15 +67,11 @@
         </div>
     </section>
 </article>
-<div class="table-holder table-responsive">
-    <table id="tblList" class="table table-hover table-striped">
-    </table>
-</div>
 
 <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/todc-bootstrap/3.3.6-3.3.6/js/bootstrap.min.js"></script>
-<script src="js/crud.js"></script>
+<script src="js/cu.js"></script>
 <script src="js/display.js"></script>
 
 </body>
